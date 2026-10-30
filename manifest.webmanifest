@@ -1,0 +1,11 @@
+JSON
+{
+  "name": "UMKM SMART BUSINESS",
+  "short_name": "UMKM SMART",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#f4f7f5",
+  "theme_color": "#102a24",
+  "description": "Kelola usaha UMKM dalam satu aplikasi",
+  "icons": []
+}
