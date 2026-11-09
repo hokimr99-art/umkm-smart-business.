@@ -1,8 +1,8 @@
 {
-  "name": "umkm-smart-business",
+  "name": "lumbra",
   "version": "0.2.0",
   "private": true,
-  "description": "UMKM SMART BUSINESS (nama kerja) — platform bisnis multi-tenant. Phase 1: Foundation.",
+  "description": "Lumbra — platform bisnis multi-tenant untuk UMKM hingga korporasi. Phase 1: Foundation.",
   "type": "module",
   "engines": {
     "node": ">=20.19.0"

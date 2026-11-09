@@ -1,4 +1,4 @@
-# Status Proyek — UMKM SMART BUSINESS (nama kerja)
+# Status Proyek — Lumbra (sebelumnya: UMKM SMART BUSINESS)
 
 Terakhir diperbarui: 9 November 2026. Dokumen ini membedakan tegas: **dirancang**, **ditulis dalam kode**,
 **terhubung**, **teruji**, dan **siap produksi**.
@@ -61,10 +61,15 @@ Terakhir diperbarui: 9 November 2026. Dokumen ini membedakan tegas: **dirancang*
 
 Demo di GitHub Pages (branch `main`) **belum diubah** dan masih berjalan seperti semula.
 
-## Usulan nama merek (belum diputuskan)
+## Nama merek
 
-Lumbra (rekomendasi), Orvanta, Torana, Saguna, Rangka, Kalpa, Ventara, Opsira, Gunara, Ekora.
-Belum ada pemeriksaan resmi merek/domain — wajib dicek di PDKI DJKI sebelum dipilih. Nama di kode tidak diubah.
+**Lumbra** — dipilih Founder pada 9 November 2026 (dari "lumbung": tempat menyimpan dan menumbuhkan hasil usaha).
+
+- Sudah diterapkan: tampilan aplikasi, judul halaman, ikon, nama paket, dokumentasi.
+- Belum diubah (butuh langkah terpisah): nama repository GitHub, domain, alamat GitHub Pages, demo lama di
+  `legacy-demo/`. Database tidak memuat nama merek, jadi tidak terdampak.
+- **Belum diperiksa:** ketersediaan merek di PDKI DJKI, domain (mis. lumbra.id / lumbra.com / lumbra.app), dan
+  nama aplikasi di Google Play. Sebaiknya diperiksa sebelum logo, domain, atau materi pemasaran dibuat.
 
 ## Langkah berikutnya
 

@@ -1,6 +1,9 @@
-# UMKM SMART BUSINESS (nama kerja)
+# Lumbra
 
 Platform bisnis multi-tenant untuk UMKM hingga perusahaan: satu fondasi, modular, aman, AI opsional.
+
+> Nama merek **Lumbra** dipilih Founder pada 9 Nov 2026 (sebelumnya nama kerja: UMKM SMART BUSINESS).
+> Pemeriksaan resmi merek (PDKI DJKI), domain, dan nama aplikasi di Play Store **belum dilakukan**.
 
 > **Status: Phase 1 — Foundation (kode + tes lokal).** Belum terhubung ke proyek Supabase nyata dan belum
 > di-deploy. Lihat [`docs/STATUS.md`](docs/STATUS.md) untuk status jujur setiap fase.
