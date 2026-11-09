@@ -43,15 +43,25 @@ npm run test:db     # migrasi + tes RLS di PostgreSQL lokal sementara (butuh Pos
 
 ## Menghubungkan Supabase
 
-1. Supabase Dashboard → proyek Anda → **SQL Editor** → tempel isi
-   `supabase/migrations/20261109000001_phase1_foundation.sql` → **Run**.
-   (Sebaiknya di proyek baru/kosong. Jika proyek sudah berisi tabel, tinjau dulu agar tidak bentrok.)
-2. **Authentication → URL Configuration**: isi *Site URL* dengan alamat aplikasi.
-3. Salin `.env.example` menjadi `.env.local`, isi `VITE_SUPABASE_URL` dan `VITE_SUPABASE_ANON_KEY`
-   (Project Settings → API). Keduanya memang publik dan dilindungi RLS.
-   **Jangan pernah** memakai `service_role` key di frontend.
-4. Menjadikan akun sebagai Super Admin (sekali, lewat SQL Editor):
-   `insert into public.platform_admins (user_id, note) values ('<UUID pengguna>', 'founder');`
+> ⚠️ **Proyek Supabase lama sudah ada** (dibuat sebelumnya, berisi `profiles`, `stores`, `store_members`, fungsi
+> `is_store_member` / `is_store_owner`, dan trigger profil/pemilik otomatis). Migrasi
+> `supabase/migrations/20261109000001_phase1_foundation.sql` **BELUM BOLEH dijalankan di proyek itu** —
+> nama tabel, fungsi, dan trigger akan bentrok (risiko: migrasi gagal setengah jalan atau pendaftaran pengguna
+> gagal karena profil dibuat dua kali). Migrasi akan disesuaikan dengan skema asli setelah skema itu diperiksa.
+
+Langkah aman (hanya membaca, tidak mengubah apa pun):
+
+1. Supabase Dashboard → proyek → **SQL Editor** → **New query**.
+2. Tempel isi `supabase/inspect/schema_snapshot.sql` → **Run**. Query ini hanya membaca katalog sistem
+   (struktur tabel, policy, fungsi, trigger, jumlah baris) — tidak membaca isi data dan tidak memuat secret.
+3. Salin hasilnya untuk ditinjau.
+
+Setelah migrasi penyesuaian siap dan disetujui:
+
+- **Authentication → URL Configuration**: isi *Site URL* dengan alamat aplikasi.
+- Salin `.env.example` menjadi `.env.local`, isi `VITE_SUPABASE_URL` dan `VITE_SUPABASE_ANON_KEY`
+  (Project Settings → API). Keduanya publik dan dilindungi RLS. **Jangan pernah** memakai `service_role` key
+  di frontend.
 
 ## Model akses (Phase 1)
 

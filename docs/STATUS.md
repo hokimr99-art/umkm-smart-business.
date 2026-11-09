@@ -41,6 +41,16 @@ Terakhir diperbarui: 9 November 2026. Dokumen ini membedakan tegas: **dirancang*
 `auth.uid()`, dan peran Supabase (`supabase/tests/setup/`). Ini menguji logika RLS secara nyata, tetapi
 **bukan** pengganti verifikasi di proyek Supabase sungguhan.
 
+### ⚠️ Proyek Supabase lama (dilaporkan Founder, 9 Nov 2026)
+
+Founder melaporkan proyek Supabase sudah pernah dibuat dengan: `profiles`, `stores`, `store_members`, RLS,
+policies, fungsi `is_store_member` dan `is_store_owner`, trigger pembuatan profil dan pemilik toko otomatis, serta
+pengaturan Auth. Nama proyek persisnya **belum diketahui** dan skemanya **belum diverifikasi**.
+
+- Migrasi Phase 1 di repo ini **bertabrakan** dengan skema tersebut → **tidak boleh dijalankan** di proyek itu.
+- Langkah berikut: ambil *snapshot* skema read-only (`supabase/inspect/schema_snapshot.sql`), lalu tulis migrasi
+  penyesuaian yang **melanjutkan** skema lama (tanpa menghapus tabel/data), dengan tes RLS yang sama.
+
 ### Belum dikerjakan di Phase 1
 
 - Menjalankan migrasi di proyek Supabase nyata + uji alur login end-to-end.
